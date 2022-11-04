@@ -1,0 +1,21 @@
+@use "variable" as generalVar;
+
+@mixin Responsive($canvas) {
+  @if $canvas == XS {
+    @media only screen and (min-width: generalVar.$XS) {
+      @content;
+    }
+  } @else if $canvas == SM {
+    @media only screen and (min-width: generalVar.$SM) {
+      @content;
+    }
+  } @else if $canvas == MD {
+    @media only screen and (min-width: generalVar.$MD) {
+      @content;
+    }
+  } @else if $canvas == XL {
+    @media only screen and (min-width: generalVar.$XL) {
+      @content;
+    }
+  }
+}

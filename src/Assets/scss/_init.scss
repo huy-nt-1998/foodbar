@@ -1,0 +1,87 @@
+@use "variable" as generalVar;
+@use "mixin";
+@font-face {
+  font-family: "Oswald";
+  src: url(../Font/Oswald/Oswald-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url(../Font/Roboto/Roboto-Regular.ttf);
+}
+
+// =================== Style ====================
+// --- All --------------------------------
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+// --- body --------------------------------
+body {
+  line-height: 27px;
+  font-size: 16px;
+  font-family: generalVar.$font-primary;
+  color: generalVar.$color-text;
+}
+
+// --- container --------------------------------
+.container {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+@include mixin.Responsive(XS) {
+  .container {
+    max-width: 540px;
+  }
+}
+@include mixin.Responsive(SM) {
+  .container {
+    max-width: 720px;
+  }
+}
+@include mixin.Responsive(MD) {
+  .container {
+    max-width: 960px;
+  }
+}
+@include mixin.Responsive(XL) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+// --- Content --------------------------------
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: generalVar.$font-secondary;
+  font-weight: 700;
+}
+h1 {
+  font-size: 36px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 14px;
+}
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
