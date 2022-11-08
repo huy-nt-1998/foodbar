@@ -32,22 +32,22 @@ body {
   margin-right: auto;
   margin-left: auto;
 }
-@include mixin.Responsive(XS) {
+@include mixin.Responsive(xs) {
   .container {
     max-width: 540px;
   }
 }
-@include mixin.Responsive(SM) {
+@include mixin.Responsive(sm) {
   .container {
     max-width: 720px;
   }
 }
-@include mixin.Responsive(MD) {
+@include mixin.Responsive(md) {
   .container {
     max-width: 960px;
   }
 }
-@include mixin.Responsive(XL) {
+@include mixin.Responsive(xl) {
   .container {
     max-width: 1140px;
   }
@@ -85,3 +85,14 @@ p {
   margin-top: 0;
   margin-bottom: 1rem;
 }
+a {
+  text-decoration: none;
+  font-size: 13px;
+}
+// --- Flexbox --------------------------------
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+}
+@include mixin.splitCol();

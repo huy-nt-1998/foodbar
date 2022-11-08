@@ -1,21 +1,42 @@
+@use "sass:meta";
 @use "variable" as generalVar;
 
 @mixin Responsive($canvas) {
-  @if $canvas == XS {
+  @if $canvas == xs {
     @media only screen and (min-width: generalVar.$XS) {
       @content;
     }
-  } @else if $canvas == SM {
+  } @else if $canvas == sm {
     @media only screen and (min-width: generalVar.$SM) {
       @content;
     }
-  } @else if $canvas == MD {
+  } @else if $canvas == md {
     @media only screen and (min-width: generalVar.$MD) {
       @content;
     }
-  } @else if $canvas == XL {
+  } @else if $canvas == xl {
     @media only screen and (min-width: generalVar.$XL) {
       @content;
+    }
+  }
+}
+
+@mixin splitCol() {
+  $devices: sm, md, lg;
+  @for $width from 1 to 13 {
+    @each $dv in $devices {
+      .col-#{$width} {
+        flex: 0 0 calc(100% * #{$width} / 12);
+        max-width: calc(100% * #{$width} / 12);
+        padding: 0 15px;
+      }
+      @include Responsive($dv) {
+        .col-#{$dv}-#{$width} {
+          flex: 0 0 calc(100% * #{$width} / 12);
+          max-width: calc(100% * #{$width} / 12);
+          padding: 0 15px;
+        }
+      }
     }
   }
 }
