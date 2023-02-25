@@ -1,14 +1,17 @@
-@use "../../Assets/scss/variable" as generalVar;
-@use "../../Assets/scss/mixin";
+// @use "../../../Assets/scss/mixin";
+@import "../../../Styles/Abstracts/variable";
+// @import "../../../Styles/Abstracts/mixins";
 .header {
+  &__bg{
+    background-color: $color-primary;
+    padding: 2px 0;
+  }
   &__layout {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
   }
-  background-color: generalVar.$color-primary;
-  padding: 2px 0;
   &__logo {
     img {
       max-width: 100%;
@@ -17,16 +20,16 @@
   &__menu {
     width: 100%;
     overflow: hidden;
-    transition: generalVar.$transition;
+    transition: $transition;
     height: 0;
     &__item {
-      border-bottom: 1px solid generalVar.$color-text;
+      border-bottom: 1px solid $color-text;
       a {
         font-weight: 500;
-        color: generalVar.$color-white;
+        color: $color-white;
       }
       &--active {
-        color: generalVar.$color-danger !important;
+        color: $color-danger !important;
       }
     }
     &-mobile {
@@ -38,8 +41,8 @@
         left: 0;
         width: 30px;
         height: 2px;
-        background-color: generalVar.$color-white;
-        transition: generalVar.$transition;
+        background-color: $color-white;
+        transition: $transition;
         &::before {
           content: "";
           position: absolute;
@@ -47,8 +50,8 @@
           left: 0;
           width: 30px;
           height: 2px;
-          background-color: generalVar.$color-white;
-          transition: generalVar.$transition;
+          background-color: $color-white;
+          transition: $transition;
         }
         &::after {
           content: "";
@@ -57,8 +60,8 @@
           left: 0;
           width: 30px;
           height: 2px;
-          background-color: generalVar.$color-white;
-          transition: generalVar.$transition;
+          background-color: $color-white;
+          transition: $transition;
         }
       }
     }
@@ -81,7 +84,7 @@
     }
   }
 }
-@include mixin.Responsive(md) {
+@include Responsive(md) {
   .header {
     &__menu {
       width: fit-content;
@@ -98,10 +101,10 @@
         margin-left: 50px;
         a {
           font-weight: 500;
-          color: generalVar.$color-white;
+          color: $color-white;
         }
         &--active {
-          color: generalVar.$color-danger !important;
+          color: $color-danger !important;
         }
       }
     }

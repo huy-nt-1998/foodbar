@@ -1,1 +1,8 @@
-@use "Assets/scss/init";
+@import 'Styles/Base/typography';
+@import 'Styles/Abstracts/variable';
+@import 'Styles/Abstracts/mixins';
+@import 'Styles/Base/reset';
+@import 'Components/Common/index';
+@import 'Components/Layout/Header/Header.scss';
+@import 'Components/Layout/Banner/Banner'
+

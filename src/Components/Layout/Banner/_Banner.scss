@@ -1,0 +1,18 @@
+.banner{
+    background-color: $color-default;
+    &__layout{
+      text-align: center;
+      padding: 120px 0;
+    }
+    &__title{
+      color: $color-primary;
+    }
+    &__link{
+      padding: 10px;
+      &__item{
+        color: $color-text;
+        margin: 0 5px;
+        font-size: 15px;
+      }
+    }
+}

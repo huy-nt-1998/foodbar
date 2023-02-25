@@ -1,21 +1,20 @@
 @use "sass:meta";
-@use "variable" as generalVar;
 
 @mixin Responsive($canvas) {
   @if $canvas == xs {
-    @media only screen and (min-width: generalVar.$XS) {
+    @media only screen and (min-width: $XS) {
       @content;
     }
   } @else if $canvas == sm {
-    @media only screen and (min-width: generalVar.$SM) {
+    @media only screen and (min-width: $SM) {
       @content;
     }
   } @else if $canvas == md {
-    @media only screen and (min-width: generalVar.$MD) {
+    @media only screen and (min-width: $MD) {
       @content;
     }
   } @else if $canvas == xl {
-    @media only screen and (min-width: generalVar.$XL) {
+    @media only screen and (min-width: $XL) {
       @content;
     }
   }
