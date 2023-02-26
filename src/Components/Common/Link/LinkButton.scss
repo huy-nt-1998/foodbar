@@ -1,0 +1,11 @@
+.link-button{
+    display: inline-block;
+    margin-top: 25px;
+    padding: 10px 32px;
+    border: none;
+    border-radius: 5px;
+    background-color: $color-danger;
+    color: $color-white;
+    font-weight: bold;
+    box-shadow: -10px 10px 40px rgb(244 47 44 / 32%);
+}

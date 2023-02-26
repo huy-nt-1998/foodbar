@@ -1,5 +1,5 @@
 import React from "react";
-import logo from '../../../Assets/Images/logo.png.webp'
+import logo from '../../../Assets/Images/Header/logo.png.webp'
 import { NavLink, useLocation } from "react-router-dom";
 import Banner from '../Banner/Banner'
 function Header() {
