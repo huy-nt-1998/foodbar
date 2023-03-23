@@ -5,9 +5,10 @@ function Banner() {
   return <div className="banner">
     <div className="banner__layout">
       <h1 className="banner__title">{state.title}</h1>
-      <div className="banner__link">
+      {state.title === "Home" ? null : <div className="banner__link">
         <Link className="banner__link__item"  to="/">Home</Link> {"->"} <span className="banner__link__item" >{state.title}</span>
-      </div>
+      </div>}
+      
     </div>
   </div>
 }

@@ -1,7 +1,8 @@
 // Font
 $font-primary: "Roboto";
 $font-secondary: "Oswald";
-$font-heading: "Oswald-bold";
+$font-heading: "Oswald-heading";
+$font-bold: "Oswald-bold";
 // Color
 $color-default: #f9f9ff;
 $color-primary: #04091e;
@@ -17,6 +18,7 @@ $color-black: black;
 $XS: 576px;
 $SM: 768px;
 $MD: 992px;
+$LG: 1200px;
 $XL: 1200px;
 // Transition
 $transition: all 0.5s;

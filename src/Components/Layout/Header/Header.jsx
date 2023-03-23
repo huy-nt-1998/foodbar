@@ -1,9 +1,7 @@
 import React from "react";
 import logo from '../../../Assets/Images/Header/logo.png.webp'
-import { NavLink, useLocation } from "react-router-dom";
-import Banner from '../Banner/Banner'
+import { NavLink } from "react-router-dom";
 function Header() {
-  const { pathname } = useLocation()
   return <div className="header">
     <div className="header__bg">
       <div className="container">
@@ -22,15 +20,13 @@ function Header() {
               <div className="header__menu__item"><NavLink className={({ isActive }) => isActive ? 'header__menu__item--active' : undefined} to="/about" state={{ title: "About Us" }}>ABOUT</NavLink></div>
               <div className="header__menu__item"><NavLink className={({ isActive }) => isActive ? 'header__menu__item--active' : undefined} to="/menu" state={{ title: "Menu" }}>MENU</NavLink></div>
               <div className="header__menu__item"><NavLink className={({ isActive }) => isActive ? 'header__menu__item--active' : undefined} to="/book-a-table" state={{ title: "Book A Table" }}>BOOK A TABLE</NavLink></div>
-              <div className="header__menu__item"><NavLink className={({ isActive }) => isActive ? 'header__menu__item--active' : undefined} to="/blog" state={{ title: "Blog" }}>BLOG</NavLink></div>
+              {/* <div className="header__menu__item"><NavLink className={({ isActive }) => isActive ? 'header__menu__item--active' : undefined} to="/blog" state={{ title: "Blog" }}>BLOG</NavLink></div> */}
               <div className="header__menu__item"><NavLink className={({ isActive }) => isActive ? 'header__menu__item--active' : undefined} to="/contact" state={{ title: "Contact" }}>CONTACT</NavLink></div>
             </div>
           </div>
         </div>
       </div>
     </div>
-
-    {pathname === '/' ? null : <Banner />}
   </div>
 }
 export default Header

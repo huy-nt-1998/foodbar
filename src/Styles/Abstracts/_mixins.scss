@@ -1,19 +1,31 @@
 @use "sass:meta";
 
 @mixin Responsive($canvas) {
-  @if $canvas == xs {
+  @if $canvas ==xs {
     @media only screen and (min-width: $XS) {
       @content;
     }
-  } @else if $canvas == sm {
+  }
+
+  @else if $canvas ==sm {
     @media only screen and (min-width: $SM) {
       @content;
     }
-  } @else if $canvas == md {
+  }
+
+  @else if $canvas ==md {
     @media only screen and (min-width: $MD) {
       @content;
     }
-  } @else if $canvas == xl {
+  }
+
+  @else if $canvas ==lg {
+    @media only screen and (min-width: $LG) {
+      @content;
+    }
+  }
+
+  @else if $canvas ==xl {
     @media only screen and (min-width: $XL) {
       @content;
     }
@@ -21,14 +33,20 @@
 }
 
 @mixin splitCol() {
-  $devices: sm, md, lg;
+  $devices: sm,
+  md,
+  lg,
+  xl;
+
   @for $width from 1 to 13 {
-    @each $dv in $devices {
-      .col-#{$width} {
-        flex: 0 0 calc(100% * #{$width} / 12);
-        max-width: calc(100% * #{$width} / 12);
-        padding: 0 15px;
-      }
+    .col-#{$width} {
+      flex: 0 0 calc(100% * #{$width} / 12);
+      max-width: calc(100% * #{$width} / 12);
+      padding: 0 15px;
+    }
+  }
+  @each $dv in $devices {
+    @for $width from 1 to 13 {
       @include Responsive($dv) {
         .col-#{$dv}-#{$width} {
           flex: 0 0 calc(100% * #{$width} / 12);

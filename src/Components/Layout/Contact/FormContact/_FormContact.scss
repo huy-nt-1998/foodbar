@@ -1,0 +1,14 @@
+.form-contact{
+    padding: 0px 0 100px;
+    &__info{
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+        .form-contact__detail{
+            color: $color-black;
+            padding: 0 10px;
+            font-size: 14px;
+            font-family: $font-bold;
+        }
+    }
+}

@@ -1,12 +1,8 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import Header from "./Components/Layout/Header/Header";
-import Home from "./Components/Pages/Home/Home";
-import About from "./Components/Pages/About/About";
-import Blog from "./Components/Pages/Blog/Blog";
-import BookATable from "./Components/Pages/BookATable/BookATable";
-import Contact from "./Components/Pages/Contact/Contact";
-import Menu from "./Components/Pages/Menu/Menu";
+import { Header, Footer } from "./Components/Layout";
+import {Home, About, Menu, BookATable, Blog, Contact} from './Components/Pages'
+
 import './App.scss'
 function App() {
   return <div className="App">
@@ -19,6 +15,7 @@ function App() {
       <Route path="/blog" element={<Blog />} />
       <Route path="/contact" element={<Contact />} />
     </Routes>
+    <Footer/>
   </div>
 }
 export default App

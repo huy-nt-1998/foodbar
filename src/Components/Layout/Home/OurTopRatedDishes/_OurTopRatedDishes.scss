@@ -1,0 +1,17 @@
+.top-rate {
+  &__item {
+    text-align: center;
+
+    .top-rate__info__title {
+      &:hover {
+        cursor: pointer;
+        color: $color-danger;
+      }
+    }
+
+    .top-rate__info__cost {
+      font-family: $font-bold;
+      color: $color-black;
+    }
+  }
+}
